@@ -15,7 +15,7 @@ RUN bitnami-pkg install mysql-client-10.1.13-4 --checksum 14b45c91dd78b37f0f2366
 RUN bitnami-pkg install mariadb-10.1.14-4 --checksum 4a75f4f52587853d69860662626c64a4540126962cd9ee9722af58a3e7cfa01b
 
 # Install codeigniter module
-RUN bitnami-pkg install codeigniter-3.1.0-0 --checksum 6ab5915956daab8686e48a0eb5b18155b9da2e1e46d1c4d2008d760702ec86c3
+RUN bitnami-pkg install codeigniter-3.1.0-0 --checksum d84d407cc52fb9b21f92e58c5ed183f19e5765291de0da573cc3c11265d1c677
 
 EXPOSE 8000
 
