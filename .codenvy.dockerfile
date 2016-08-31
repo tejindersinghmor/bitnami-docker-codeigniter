@@ -20,8 +20,6 @@ RUN bitnami-pkg install codeigniter-3.1.0-0 --checksum ca2783a271a66b4dcda5d797a
 
 EXPOSE 8000
 
-RUN harpoon start mariadb
-
 USER bitnami
 
 WORKDIR /projects
@@ -31,4 +29,4 @@ LABEL che:server:8000:ref=codeigniter che:server:8000:protocol=http
 
 ENV TERM=xterm
 
-CMD ["tail", "-f", "/dev/null"]
+CMD ["harpoon", "start", "--foreground", "mariadb"]
