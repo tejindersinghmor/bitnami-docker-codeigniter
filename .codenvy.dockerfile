@@ -20,6 +20,8 @@ RUN bitnami-pkg install codeigniter-3.1.0-0 --checksum d84d407cc52fb9b21f92e58c5
 
 EXPOSE 8000
 
+RUN harpoon start mariadb
+
 USER bitnami
 
 WORKDIR /projects

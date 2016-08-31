@@ -60,7 +60,7 @@
       {
         "name": "create project - run first",
         "type": "custom",
-        "commandLine": "source /opt/bitnami/stacksmith-utils.sh && print_welcome_page && nami execute codeigniter createProject app_template && php -S 0.0.0.0:8000 -t ${current.project.path}/app_template",
+        "commandLine": "source /opt/bitnami/stacksmith-utils.sh && print_welcome_page && harpoon execute codeigniter createProject app_template && php -S 0.0.0.0:8000 -t ${current.project.path}/app_template",
         "attributes": {
            "previewUrl": "http://${server.port.8000}/"
         }
