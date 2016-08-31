@@ -20,8 +20,6 @@ RUN bitnami-pkg install codeigniter-3.1.0-0 --checksum ca2783a271a66b4dcda5d797a
 
 EXPOSE 8000
 
-USER bitnami
-
 WORKDIR /projects
 
 # Interact with Eclipse che
