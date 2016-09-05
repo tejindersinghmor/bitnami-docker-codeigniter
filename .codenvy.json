@@ -14,8 +14,8 @@
               "ram": 1024
             },
             "source": {
-              "type": "dockerfile",
-              "location": "https://raw.githubusercontent.com/bitnami/bitnami-docker-codeigniter/che/.codenvy.dockerfile"
+              "type": "image",
+              "location": "bitnami/codeigniter:che"
             },
             "type": "docker",
             "dev": true
