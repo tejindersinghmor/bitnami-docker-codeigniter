@@ -30,10 +30,10 @@
         "path": "/codeigniter-sample",
         "source": {
           "type": "git",
-          "location": "https://github.com/bitnami/bitnami-docker-codeigniter",
+          "location": "https://github.com/bitnami/bitnami-docker-che-blank-sample",
           "parameters": {
             "branch": "che",
-            "keepVcs": "true"
+            "keepVcs": "false"
           }
         },
         "mixins": [
