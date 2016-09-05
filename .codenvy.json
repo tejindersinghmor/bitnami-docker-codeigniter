@@ -52,7 +52,7 @@
       {
         "name": "run",
         "type": "custom",
-        "commandLine": "source /opt/bitnami/stacksmith-utils.sh && print_welcome_page && php -S 0.0.0.0:8000 -t ${current.project.path}/app_template",
+        "commandLine": "source /opt/bitnami/stacksmith-utils.sh && print_welcome_page && php -S 0.0.0.0:8000 -t ${current.project.path}",
         "attributes": {
            "previewUrl": "http://${server.port.8000}/"
         }
@@ -60,7 +60,7 @@
       {
         "name": "create project - run first",
         "type": "custom",
-        "commandLine": "source /opt/bitnami/stacksmith-utils.sh && print_welcome_page && harpoon execute codeigniter createProject app_template && php -S 0.0.0.0:8000 -t ${current.project.path}/app_template",
+        "commandLine": "source /opt/bitnami/stacksmith-utils.sh && print_welcome_page && harpoon execute codeigniter createProject --force codeigniter-sample && php -S 0.0.0.0:8000 -t ${current.project.path}",
         "attributes": {
            "previewUrl": "http://${server.port.8000}/"
         }
