@@ -25,9 +25,9 @@
     ],
     "projects": [
       {
-        "name": "codeigniter-sample",
+        "name": "codeigniter_sample",
         "type": "blank",
-        "path": "/codeigniter-sample",
+        "path": "/codeigniter_sample",
         "source": {
           "type": "git",
           "location": "https://github.com/bitnami/bitnami-docker-che-blank-sample",
@@ -60,7 +60,7 @@
       {
         "name": "create project - run first",
         "type": "custom",
-        "commandLine": "source /opt/bitnami/stacksmith-utils.sh && print_welcome_page && harpoon execute codeigniter createProject --force codeigniter-sample && php -S 0.0.0.0:8000 -t ${current.project.path}",
+        "commandLine": "source /opt/bitnami/stacksmith-utils.sh && print_welcome_page && harpoon execute codeigniter createProject --force codeigniter_sample && php -S 0.0.0.0:8000 -t ${current.project.path}",
         "attributes": {
            "previewUrl": "http://${server.port.8000}/"
         }
