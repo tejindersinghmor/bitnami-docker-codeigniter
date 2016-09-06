@@ -16,7 +16,7 @@ RUN bitnami-pkg install mysql-client-10.1.13-4 --checksum 14b45c91dd78b37f0f2366
 
 
 # Install codeigniter module
-RUN bitnami-pkg install codeigniter-3.1.0-1 --checksum 3cd20def39f098121ca0e851b4a4b7375c8c7e110b87272b2b3bdefb1feb6335 -- --applicationDirectory /projects
+RUN bitnami-pkg install codeigniter-3.1.0-0 --checksum 0e85ce8e75f327910b6647c25105f0ea2e4846c58dd560d97586b517fd575edc -- --applicationDirectory /projects
 
 EXPOSE 8000
 
