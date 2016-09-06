@@ -3,7 +3,7 @@ FROM gcr.io/stacksmith-images/ubuntu-buildpack:14.04-r9
 MAINTAINER Bitnami <containers@bitnami.com>
 
 ENV BITNAMI_APP_NAME=codeigniter \
-    BITNAMI_APP_VERSION=3.1.0-1 \
+    BITNAMI_APP_VERSION=3.1.0-2 \
     PATH=/opt/bitnami/java/bin:/opt/bitnami/php/bin:/opt/bitnami/mysql/bin/:$PATH
 
 # Install java dependency
@@ -16,7 +16,7 @@ RUN bitnami-pkg install mysql-client-10.1.13-4 --checksum 14b45c91dd78b37f0f2366
 
 
 # Install codeigniter module
-RUN bitnami-pkg install codeigniter-3.1.0-0 --checksum 0e85ce8e75f327910b6647c25105f0ea2e4846c58dd560d97586b517fd575edc -- --applicationDirectory /projects
+RUN bitnami-pkg install codeigniter-3.1.0-2 --checksum 00f4e413b46969bc31e1df5db8a54814eb1b221c30da7e8ec4911ac69b41d33c -- --applicationDirectory /projects
 
 EXPOSE 8000
 
@@ -27,4 +27,6 @@ LABEL che:server:8000:ref=codeigniter che:server:8000:protocol=http
 
 ENV TERM=xterm
 
-CMD ["harpoon", "start", "--foreground", "mariadb"]
+USER bitnami
+
+CMD ["sudo", "HOME=/root", "/opt/bitnami/nami/bin/nami", "start", "--foreground", "mariadb"]
