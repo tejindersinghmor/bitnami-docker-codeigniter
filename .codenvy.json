@@ -15,7 +15,7 @@
             },
             "source": {
               "type": "image",
-              "location": "bitnami/codeigniter:che"
+              "location": "bitnami/che-codeigniter:development"
             },
             "type": "docker",
             "dev": true
