@@ -20,13 +20,12 @@ RUN bitnami-pkg install codeigniter-3.1.0-2 --checksum 00f4e413b46969bc31e1df5db
 
 EXPOSE 8000
 
-WORKDIR /projects
-
 # Interact with Eclipse che
 LABEL che:server:8000:ref=codeigniter che:server:8000:protocol=http
 
-ENV TERM=xterm
-
 USER bitnami
+WORKDIR /projects
+
+ENV TERM=xterm
 
 CMD ["sudo", "HOME=/root", "/opt/bitnami/nami/bin/nami", "start", "--foreground", "mariadb"]
