@@ -1,28 +1,35 @@
 {
   "v": "4.0",
   "workspace": {
-    "name": "codeigniter",
-    "defaultEnv": "codeigniter",
-    "environments": [
-      {
-        "name": "codeigniter",
-        "recipe": null,
-        "machineConfigs": [
-          {
-            "name": "ws-machine",
-            "limits": {
-              "ram": 1024
+    "name": "codeigniter-wss",
+    "environments": {
+      "codeigniter-env": {
+        "recipe": {
+          "type": "dockerimage",
+          "location": "bitnami/che-codeigniter:che-3.1.0-r3"
+        },
+        "machines": {
+          "ws-machine": {
+            "agents": [
+              "org.eclipse.che.terminal",
+              "org.eclipse.che.ws-agent",
+              "org.eclipse.che.ssh"
+            ],
+            "servers": {
+              "codeigniter": {
+                "port": "8000/tcp",
+                "protocol": "http",
+                "properties": {}
+              }
             },
-            "source": {
-              "type": "image",
-              "location": "bitnami/che-codeigniter:che-3.1.0-r2"
-            },
-            "type": "docker",
-            "dev": true
+            "attributes": {
+              "memoryLimitsBytes": "1073741824"
+            }
           }
-        ]
+        }
       }
-    ],
+    },
+    "defaultEnv": "codeigniter-env",
     "projects": [
       {
         "name": "codeigniter_sample",
@@ -30,7 +37,7 @@
         "path": "/codeigniter_sample",
         "source": {
           "type": "git",
-          "location": "https://github.com/bitnami/bitnami-docker-che-blank-sample",
+          "location": "https://github.com/bitnami/bitnami-docker-che-blank-sample.git",
           "parameters": {
             "keepVcs": "false"
           }
@@ -69,10 +76,10 @@
     "onProjectsLoaded": {
       "actions": [
         {
+          "id": "runCommand",
           "properties": {
             "name": "1. Create project"
-          },
-          "id": "runCommand"
+          }
         }
       ]
     }
