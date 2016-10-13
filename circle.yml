@@ -2,7 +2,7 @@ machine:
   services:
   - docker
   environment:
-    IMAGE_NAME: che-codeignitor
+    IMAGE_NAME: che-codeigniter
     DOCKER_PROJECT: bitnami
     GCLOUD_PROJECT: bitnami-containers
 
