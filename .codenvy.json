@@ -22,7 +22,7 @@
         }
       }
     },
-    "name": "bitnami-codeigniter",
+    "name": "codeigniter",
     "defaultEnv": "default",
     "projects": [
       {
