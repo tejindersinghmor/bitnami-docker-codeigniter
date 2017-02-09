@@ -8,7 +8,7 @@ RUN install_packages git subversion openssh-server rsync
 RUN mkdir /var/run/sshd && sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
 
 ENV BITNAMI_APP_NAME=che-codeigniter \
-    BITNAMI_IMAGE_VERSION=3.1.3-r1 \
+    BITNAMI_IMAGE_VERSION=3.1.3-r2 \
     PATH=/opt/bitnami/php/bin:/opt/bitnami/mysql/bin/:$PATH
 
 # System packages required
@@ -32,4 +32,4 @@ WORKDIR /projects
 
 ENV TERM=xterm
 
-CMD sudo /usr/sbin/sshd -D && sudo HOME=/root /opt/bitnami/nami/bin/nami start --foreground mariadb
+CMD sudo /usr/sbin/sshd && sudo HOME=/root /opt/bitnami/nami/bin/nami start --foreground mariadb
