@@ -16,7 +16,7 @@
             ],
             "servers": {},
             "attributes": {
-              "memoryLimitBytes": "2147483648"
+              "memoryLimitsBytes": "2147483648"
             }
           }
         }
