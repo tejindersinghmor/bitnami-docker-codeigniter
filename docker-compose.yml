@@ -13,4 +13,4 @@ services:
   mariadb:
     image: 'bitnami/mariadb:latest'
     environment:
-      - ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_ROOT_PASSWORD=root
